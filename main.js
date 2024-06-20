@@ -3,40 +3,30 @@ const fraseInputElement = document.getElementById('fraseInput')
 const tempoDigitacao = document.getElementById('timer')
 
 const frases = [
-  "Uma mensagem muito longa!",
-  "Eu gosto de chocolate e você?",
-  "Aqui vai uma frase inspiradora.",
+  "um cachorro que fala",
+    "uma floresta mágica",
+    "um dia vivendo no espaço",
+    "um brinquedo que ganha vida",
+    "uma festa junina com animais da selva",
+    "uma cidade feita de doces",
+    "um dia na escola de magia",
+    "um robô amigo",
+    "um mundo onde tudo é gigante",
+    "uma aventura embaixo do mar",
+    "um príncipe sapo",
+    "um livro mágico que realiza desejos",
+    "um parque de diversões",
+    "um detetive com cabelo vermelho",
+    "um dia sem energia",
+    "uma viagem para o tempo dos dinossauros",
+    "uma aventura com fadas e duendes",
+    "um chapéu mágico que dá poderes",
+    "uma lâmpada mágica",
+    "um inverno onde a neve é colorida",
+    "uma viagem para o planeta Marte",
+    "um dia de um capitão de navio pirata",
+    "um dia em uma fábrica de brinquedos"
 ];
-
-fraseInputElement.addEventListener('input', () => {
-  const listaFrases = fraseDisplayElement.querySelectorAll('span')
-  const listaValores = fraseInputElement.value.split('')
-
-  let correto = true
-  listaFrases.forEach((caractereSpan, index) => {
-    const caractere = listaValores[index]
-    if (caractere == null) {
-      caractereSpan.classList.remove('correto')
-      caractereSpan.classList.remove('incorreto')
-      correto = false
-    } else if (caractere === caractereSpan.innerText) {
-      caractereSpan.classList.add('correto')
-      caractereSpan.classList.remove('incorreto')
-    } else {
-      caractereSpan.classList.remove('correto')
-      caractereSpan.classList.add('incorreto')
-      correto = false
-    }
-  })
-
-  if (correto) sorteiaFrase()
-})
-
-// function getRandomfrase() {
-//   return fetch(RANDOM_frase_API_URL)
-//     .then(response => response.json())
-//     .then(data => data.content)
-// }
 
 async function sorteiaFrase() {
   const randomIndex = Math.floor(Math.random() * frases.length); // Get a random index
