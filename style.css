@@ -4,7 +4,7 @@
     --cor-principal: #6E859F;
     --cor-secundaria: #284260;
     --cor-destaque: #C92BFC;
-    --cor-historia: #61e061;
+    --cor-historia: #4ebfe9ff;
 }
 
 body {
@@ -39,18 +39,19 @@ h1 {
 
 .frase-input {
     background-color: transparent;
-    border: 2px solid var(--cor-secundaria);
+    border: 2px solid var(--cor-historia);
     width: 90%;
     height: 8rem;
     font-size: 1rem;
 }
 
 .frase-input:focus {
-    border-color: var(--cor-historia);
+    border-color: var(--cor-destaque);
 }
 
 button {
     border: 2px solid var(--cor-destaque);
+    color: var(--cor-destaque);
     font-weight: 600;
 }
 

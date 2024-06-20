@@ -25,9 +25,7 @@ const frases = [
     "um inverno onde a neve é colorida",
     "uma viagem para o planeta Marte",
     "um dia de um capitão de navio pirata",
-    "um dia em uma fábrica de brinquedos", 
-    "uma conversa entre a Lua e o Sol",
-    "uma conversa entre a Terra e a Lua",
+    "um dia em uma fábrica de brinquedos"
 ];
 
 botaoTema.addEventListener('click', sorteiaFrase);
