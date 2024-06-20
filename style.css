@@ -4,6 +4,7 @@
     --cor-principal: #6E859F;
     --cor-secundaria: #284260;
     --cor-destaque: #C92BFC;
+    --cor-historia: #61e061;
 }
 
 body {
@@ -45,7 +46,7 @@ h1 {
 }
 
 .frase-input:focus {
-    border-color: var(--cor-destaque);
+    border-color: var(--cor-historia);
 }
 
 button {
