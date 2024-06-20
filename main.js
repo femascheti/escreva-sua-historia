@@ -1,9 +1,9 @@
-const fraseDisplayElement = document.getElementById('fraseDisplay')
-const fraseInputElement = document.getElementById('fraseInput')
-const tempoDigitacao = document.getElementById('timer')
+const fraseDisplayElement = document.getElementById('fraseDisplay');
+const fraseInputElement = document.getElementById('fraseInput');
+const botaoTema = document.getElementById('btn-sorteia');
 
 const frases = [
-  "um cachorro que fala",
+    "um cachorro que fala",
     "uma floresta mágica",
     "um dia vivendo no espaço",
     "um brinquedo que ganha vida",
@@ -28,34 +28,16 @@ const frases = [
     "um dia em uma fábrica de brinquedos"
 ];
 
-async function sorteiaFrase() {
-  const randomIndex = Math.floor(Math.random() * frases.length); 
-  const frase = frases[randomIndex]; 
+botaoTema.addEventListener('click', sorteiaFrase);
 
-  fraseDisplayElement.innerHTML = ''; 
+function sorteiaFrase() {
+    const randomIndex = Math.floor(Math.random() * frases.length);
+    const frase = frases[randomIndex];
 
-  frase.split('').forEach(caractere => {
-    const caractereSpan = document.createElement('span');
-    caractereSpan.innerText = caractere;
-    fraseDisplayElement.appendChild(caractereSpan);
-  });
-
-  fraseInputElement.value = ''; 
-  comecarContagem();
+    fraseDisplayElement.innerHTML = frase;
+    fraseInputElement.value = '';
 }
 
 
-let tempoInicio
-function comecarContagem() {
-  tempoDigitacao.innerText = 0
-  tempoInicio = new Date()
-  setInterval(() => {
-    timer.innerText = startTempo()
-  }, 1000)
-}
 
-function startTempo() {
-  return Math.floor((new Date() - tempoInicio) / 1000)
-}
-
-sorteiaFrase()
+sorteiaFrase();
