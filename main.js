@@ -29,10 +29,10 @@ const frases = [
 ];
 
 async function sorteiaFrase() {
-  const randomIndex = Math.floor(Math.random() * frases.length); // Get a random index
-  const frase = frases[randomIndex]; // Pick a random frase from the list
+  const randomIndex = Math.floor(Math.random() * frases.length); 
+  const frase = frases[randomIndex]; 
 
-  fraseDisplayElement.innerHTML = ''; // Clear the display
+  fraseDisplayElement.innerHTML = ''; 
 
   frase.split('').forEach(caractere => {
     const caractereSpan = document.createElement('span');
@@ -40,7 +40,7 @@ async function sorteiaFrase() {
     fraseDisplayElement.appendChild(caractereSpan);
   });
 
-  fraseInputElement.value = ''; // Clear the input field
+  fraseInputElement.value = ''; 
   comecarContagem();
 }
 
